@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,5 +12,5 @@ export default defineConfig({
     outDir: '../dist',
     emptyOutDir: true, // 本番ビルド前にビルドディレクトリを空にする
   },
-  plugins: [react()]
-})
+  plugins: [react()],
+});
