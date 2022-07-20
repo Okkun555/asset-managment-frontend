@@ -6,6 +6,6 @@ const App = () => {
     const route = useRoutes(rootPath);
 
     return <div>{route}</div>;
-}
+};
 
 export default App;
