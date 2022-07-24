@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Box,  List, ListItemButton, ListItemText} from '@mui/material';
+import React, { useState } from 'react';
+import { Box, List, ListItemButton, ListItemText } from '@mui/material';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import PaymentsIcon from '@mui/icons-material/Payments';
 
@@ -9,7 +9,7 @@ export const SettingMenu = () => {
 
     const onClickMenu = (targetId: number) => {
         setSelected(targetId);
-    }
+    };
 
     const menuList = [
         { id: 1, title: '収入カテゴリー', icon: AccountBalanceWalletIcon, label: 'income-category' },
@@ -18,17 +18,14 @@ export const SettingMenu = () => {
 
     return (
         <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-            { menuList.map(menu => (
+            {menuList.map((menu) => (
                 <List component="nav" aria-label={menu.label} key={menu.id}>
-                    <ListItemButton
-                        selected={selected === menu.id}
-                        onClick={(event) => onClickMenu(menu.id)}
-                    >
+                    <ListItemButton selected={selected === menu.id} onClick={(event) => onClickMenu(menu.id)}>
                         <menu.icon />
-                        <ListItemText primary={menu.title} sx={{ ml: 2}} />
+                        <ListItemText primary={menu.title} sx={{ ml: 2 }} />
                     </ListItemButton>
                 </List>
             ))}
         </Box>
-    )
+    );
 };

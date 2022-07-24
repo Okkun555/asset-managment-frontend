@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import {AppBar, Box, IconButton, Menu, MenuItem, Toolbar, Typography} from "@mui/material";
+import React, { useState } from 'react';
+import { AppBar, Box, IconButton, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 
@@ -24,14 +24,14 @@ export const Header = () => {
         <Box>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2}}>
+                    <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         資産管理マネージャー
                     </Typography>
 
-                    { auth && (
+                    {auth && (
                         <div>
                             <IconButton
                                 size="large"
@@ -67,4 +67,4 @@ export const Header = () => {
             </AppBar>
         </Box>
     );
-}
+};
